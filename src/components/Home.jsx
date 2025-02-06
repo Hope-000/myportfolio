@@ -55,7 +55,7 @@ const Home = () => {
          {/* TV Static Effect */}
          <div className="tv-static-container max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
           <div className="tv-static "></div>
-          <img src={HeroImage} alt="my profile" className="profile-img rounded-full mx-auto w-48 md:w-100" />
+          <img src={HeroImage} alt="my profile" className="profile-img rounded-full mx-auto w-48 md:w-100 translate-x-10 opacity-90 shadow-lg shadow-blue-500/50" />
         </div>
       </div>
     </div>
