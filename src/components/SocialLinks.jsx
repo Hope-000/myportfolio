@@ -12,7 +12,7 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: "https://www.linkedin.com/in/akshaytanda/",
+      href: "https://www.linkedin.com/in/akshaytanda/", // Make sure this is correct
       style: "rounded-tr-md",
     },
     {
@@ -42,7 +42,7 @@ const SocialLinks = () => {
       ),
       href: "/resume.pdf",
       style: "rounded-br-md",
-      Download: true,
+      download: true, // Changed from "Download" to "download"
     },
   ];
 
@@ -59,11 +59,11 @@ const SocialLinks = () => {
             }
           >
             <a
-              href={href}
+              href={href.startsWith("http") ? href : `https://${href}`} // Ensure correct formatting
               className="flex justify-between items-center w-full text-white"
-              download={download}
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" // Opens in a new tab
+              rel="noopener noreferrer" // Security best practice
+              {...(download ? { download: true } : {})} // Apply "download" only if true
             >
               {child}
             </a>
